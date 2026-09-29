@@ -1,0 +1,15 @@
+1.Menambahkan Koleksi x = new Koleksi("X01", "Uji", 2026); menghasilkan error kompiler: "Koleksi is abstract; cannot be instantiated".
+
+Penyebabnya, Koleksi dideklarasikan sebagai abstract class. Class abstract tidak boleh dibuat objeknya langsung lewat new, karena class ini sengaja tidak lengkap — ia punya method abstract String keterangan(); yang belum berisi kode. Kalau Koleksi boleh diinstansiasi, Java tidak tahu kode apa yang harus dijalankan saat keterangan() dipanggil. Karena itu, hanya subclass yang melengkapi method tersebut (Buku, Majalah, Skripsi) yang boleh dibuat objeknya.
+
+2.Mengubah nama method hitungDenda menjadi hitungdenda di Buku:
+
+- Dengan @Override tetap ada: compiler langsung menolak dengan error "method does not override a method from its superclass". @Override memaksa compiler memverifikasi bahwa method ini benar-benar menimpa method dari BisaDipinjam, dan karena namanya tidak cocok persis (beda huruf besar/kecil), klaim itu ditolak.
+
+- Dengan @Override dihapus: error berubah menjadi "Buku is not abstract and does not override abstract method hitungDenda(int) in BisaDipinjam". Tanpa @Override, Java menganggap hitungdenda sebagai method baru yang berdiri sendiri, sehingga Buku dianggap gagal memenuhi kewajiban interface BisaDipinjam untuk menyediakan hitungDenda(int).
+
+3.Ini terjadi karena konstruktor Koleksi (dipanggil lewat super(...) di Buku) memvalidasi bahwa judul tidak boleh kosong atau null, dan sengaja melempar IllegalArgumentException kalau syarat itu dilanggar. Karena exception ini tidak ditangkap (tidak ada try-catch), program berhenti total dan baris-baris setelahnya di main() tidak sempat dijalankan.
+
+4.Setelah status diubah jadi public dan diubah manual jadi TERSEDIA (padahal B002 masih dipinjam Siti), Budi berhasil meminjam B002 juga — padahal secara nyata buku itu masih di tangan Siti (data peminjam tetap mencatat Siti, karena kembalikan() tidak pernah dipanggil).
+
+Aturan yang dilanggar adalah enkapsulasi.
