@@ -12,4 +12,4 @@ Penyebabnya, Koleksi dideklarasikan sebagai abstract class. Class abstract tidak
 
 4.Setelah status diubah jadi public dan diubah manual jadi TERSEDIA (padahal B002 masih dipinjam Siti), Budi berhasil meminjam B002 juga — padahal secara nyata buku itu masih di tangan Siti (data peminjam tetap mencatat Siti, karena kembalikan() tidak pernah dipanggil).
 
-Aturan yang dilanggar adalah enkapsulasi.
+Aturan yang dilanggar adalah enkapsulasi
