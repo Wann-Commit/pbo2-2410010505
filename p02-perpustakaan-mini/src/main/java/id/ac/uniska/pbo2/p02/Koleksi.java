@@ -13,7 +13,7 @@ public abstract class Koleksi implements BisaDipinjam {
     private final String kode;
     private final String judul;
     private final int tahunTerbit;
-    private StatusKoleksi status = StatusKoleksi.TERSEDIA;
+    public StatusKoleksi status = StatusKoleksi.TERSEDIA;
     
     protected Koleksi(String kode, String judul, int tahunTerbit) {
         if (judul == null || judul.isBlank()) {

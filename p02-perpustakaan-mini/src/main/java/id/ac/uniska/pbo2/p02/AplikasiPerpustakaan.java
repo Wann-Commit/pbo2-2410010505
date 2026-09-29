@@ -4,6 +4,7 @@
  */
 package id.ac.uniska.pbo2.p02;
 
+import java.util.List;
 /**
  * Menjalankan skenario peminjaman dan pengembalian pada Perpustakaan Mini.
  */
@@ -15,7 +16,8 @@ public class AplikasiPerpustakaan {
         perpus.tambah(new Buku("B001", "Laskar Pelangi", 2005, "Andrea Hirata"));
         perpus.tambah(new Buku("B002", "Clean Code", 2008, "Robert C. Martin"));
         perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
-
+        perpus.tambah(new Skripsi ("S001", "Peran Pesantren dalam Menyebarkan Pesan Damai dan Toleransi Antaragama", 2018, "Markonah", "Pendidikan Agama Islam"));
+        
         Anggota siti = new Anggota("2410010123", "Siti Rahmah");
         Anggota budi = new Anggota("2410010456", "Budi Santoso");
 
@@ -25,6 +27,9 @@ public class AplikasiPerpustakaan {
         cetakPinjam(perpus, "B002", siti);
         cetakPinjam(perpus, "B002", budi);
         cetakPinjam(perpus, "M001", budi);
+        cetakPencarian(perpus, "code");
+        cetakPinjam(perpus, "S001", siti);
+        
         System.out.println("Peminjam B002: " + perpus.getPeminjam("B002").nama());
         System.out.println();
 
@@ -35,6 +40,14 @@ public class AplikasiPerpustakaan {
         System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia()
                 + " dari " + perpus.getDaftarKoleksi().size());
     }
+    
+   private static void cetakPencarian(Perpustakaan perpus, String kataKunci) {
+       List<Koleksi> hasil = perpus.cariJudul(kataKunci);
+       System.out.println("Hasil pencarian \"" + kataKunci + "\": " + hasil.size() + " koleksi");
+       for (Koleksi k : hasil) {
+           System.out.println(k);
+       }
+   }     
 
     private static void tampilkanDaftar(Perpustakaan perpus) {
         System.out.println("=== Daftar Koleksi ===");

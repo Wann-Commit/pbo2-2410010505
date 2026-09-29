@@ -66,6 +66,16 @@ public class Perpustakaan {
         }
         return jumlah;
     }
+    
+    public List<Koleksi> cariJudul(String kataKunci) {
+        List<Koleksi> hasil = new ArrayList<>();
+        for (Koleksi k : daftarKoleksi) {
+            if (k.getJudul().toLowerCase().contains(kataKunci.toLowerCase())) {
+                hasil.add(k);
+            }
+        }
+        return hasil;
+    }
 
     /** Salinan daftar yang tidak dapat diubah, agar data asli tetap terlindungi. */
     public List<Koleksi> getDaftarKoleksi() {
