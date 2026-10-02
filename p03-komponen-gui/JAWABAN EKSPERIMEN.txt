@@ -1,0 +1,9 @@
+1.top level container (jendela yang menampung semuanya seperti bingkai), intermediate container (wadah untuk mengelompokkan sebuah component), atomic component (komponen yang berinteraksi langsung dengan user)
+
+2.Agar tidak bisa dipilih keduanya dan menyebabkan error pada program, makanya dijadikan satu group dengan buttonGroup
+
+3. Combo box dipilih jika ada banyak pilihan yang harus dipilih, untuk radio biasanya hanya ada 2 sampai 3 pilihan
+
+4. karna itu dibuat langsung oleh netbeans, untuk menambahkan kode tambahan ditaruh setelah init component
+
+5. Karna itu sebuah library tampilan untuk Form, agar Form memakai tampilan yang disediakan oleh FlatLaf maka harus dipanggil dulu. Jika tidak dipanggil maka tampilan default (metal) yang terpakai.
