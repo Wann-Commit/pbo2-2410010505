@@ -1,5 +1,22 @@
 # pbo2-2410010505
 
+# P03 - Komponen GUI Swing dan FlatLaf
+
+### Tampilan saat dijalankan
+
+**Tema terang**
+
+![FormTiketTravel tema terang](img/formTravelTerang_p03.png)
+
+**Tema gelap**
+
+![FormTiketTravel tema gelap](img/formTravelGelap_p03.png)
+
+### Tampilan tab Design (jendela Navigator)
+
+![Tab Design FormTiketTravel dengan jendela Navigator](img/tabDesign_p03.png)
+
+
 ## P04 - Layout Manager dan Desain Form
 
 ### Sketsa
