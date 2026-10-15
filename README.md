@@ -35,7 +35,7 @@
 | 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout | Ya |
 
 ### Saran Perbaikan
-1. Nama komponen `jScrollPane1` masih bawaan NetBeans dan sebaiknya diganti dengan nama bermakna.
+1. Nama komponen `jScrollPane1` masih bawaan NetBeans.
 
 
 ## Deklarasi Penggunaan AI
