@@ -36,9 +36,12 @@
 
 
 ### Tangkapan Layar
-- Ukuran awal: ![Ukuran Awal](/img/formAnggotakecil_p04.png)
-- Saat dilebarkan: ![Ukuran Lebar](/img/formAnggotaBesar_p04.png)
-- Tab Design dan Navigator: ![Ukuran Awal](/img/tabDesign_p04.png)
+- Ukuran awal: 
+![Ukuran Awal](/img/formAnggotakecil_p04.png)
+- Saat dilebarkan: 
+![Ukuran Lebar](/img/formAnggotaBesar_p04.png)
+- Tab Design dan Navigator: 
+![Ukuran Awal](/img/tabDesign_p04.png)
 
 
 ### Saling Menilai
@@ -59,4 +62,4 @@
 
 
 ## Deklarasi Penggunaan AI
-Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya.
+Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya. Serta membantu dalam penulisan README.md
