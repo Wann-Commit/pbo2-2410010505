@@ -26,7 +26,7 @@
 | No | Pemeriksaan | Ya atau Belum |
 |---|---|---|
 | 1 | Label singkat, jelas, dan sejajar | Ya |
-| 2 | Isian dikelompokkan dengan judul bagian | Belum |
+| 2 | Isian dikelompokkan dengan judul bagian | Ya |
 | 3 | Placeholder dipakai untuk isian yang punya format | Ya |
 | 4 | Komponen sesuai jenis data | Ya |
 | 5 | Tombol utama menonjol dan berada di kanan bawah | Ya |
