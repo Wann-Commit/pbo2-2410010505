@@ -45,6 +45,7 @@
 ![Ukuran Lebar](/img/formAnggotaBesar_p04.png)
 
 **Tab Design dan Navigator**
+
 ![Ukuran Awal](/img/tabDesign_p04.png)
 
 
