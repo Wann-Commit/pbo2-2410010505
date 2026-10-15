@@ -36,11 +36,15 @@
 
 
 ### Tangkapan Layar
-- Ukuran awal: 
+**Ukuran awal** 
+
 ![Ukuran Awal](/img/formAnggotakecil_p04.png)
-- Saat dilebarkan: 
+
+**Saat dilebarkan**
+
 ![Ukuran Lebar](/img/formAnggotaBesar_p04.png)
-- Tab Design dan Navigator: 
+
+**Tab Design dan Navigator**
 ![Ukuran Awal](/img/tabDesign_p04.png)
 
 
