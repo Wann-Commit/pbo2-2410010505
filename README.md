@@ -3,7 +3,7 @@
 ## P04 - Layout Manager dan Desain Form
 
 ### Sketsa
-![Sketsa Rancangan](/img/sketsa_p04.heic)
+![Sketsa Rancangan](/img/sketsa_p04.jpg)
 
 
 ### Tabel Rancangan
@@ -20,7 +20,7 @@
 
 ### Tangkapan Layar
 - Ukuran awal: ![Ukuran Awal](/img/formAnggotakecil_p04.png)
-- Saat dilebarkan: ![Ukuran Lebar](/img/formAnggotabesar_p04.png)
+- Saat dilebarkan: ![Ukuran Lebar](/img/formAnggotaBesar_p04.png)
 - Tab Design dan Navigator: ![Ukuran Awal](/img/tabDesign_p04.png)
 
 
