@@ -91,3 +91,53 @@
 
 ## Deklarasi Penggunaan AI
 Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya. Serta membantu dalam penulisan README.md
+
+## P05 - Event Handling
+ 
+### Peta Event
+ 
+| Komponen | Menu Events | Aksi |
+|---|---|---|
+| setujuCheck | Item: itemStateChanged | Tombol Daftar hanya aktif jika dicentang |
+| batalButton | Action: actionPerformed | Kosongkan semua isian dan kembalikan fokus ke NPM |
+| daftarButton | Action: actionPerformed | Tampilkan ringkasan data dengan JOptionPane |
+| npmField | Key: keyReleased | Label kecil menampilkan jumlah digit, misalnya "8 dari 10 digit" |
+| Form (JFrame di Navigator) | Window: windowClosing | Minta konfirmasi sebelum aplikasi ditutup |
+ 
+Jenis anggota (radio button) dan program studi (combo box) tidak memiliki event sendiri. Nilainya dibaca langsung di dalam event handler tombol Daftar.
+ 
+### Tangkapan Layar
+**Jendela Properties bagian Events untuk tombol Daftar**
+ 
+![Properties Events tombol Daftar](/img/tombolDaftarEvents_p05.png_p05.png)
+ 
+**Dialog ringkasan**
+ 
+![Dialog ringkasan](/img/ringkasanDialog_p05.png_p05.png)
+ 
+**Dialog konfirmasi keluar**
+ 
+![Dialog konfirmasi keluar](/img/ringkasanDialogKeluar_p05.png)
+ 
+### Tabel Pengamatan
+ 
+| No | Tindakan | Event yang tercatat |
+|---|---|---|
+| 1 | Arahkan kursor ke tombol, lalu jauhkan | Kursor masuk ke tombol, kursor keluar dari tombol |
+| 2 | Klik tombol Klik saya | Tombol diklik |
+| 3 | Centang lalu hapus centang Aktifkan fitur | Kotak dicentang, centang dihapus |
+| 4 | Ganti pilihan dari Pagi menjadi Malam | Memilih Malam |
+| 5 | Klik isian, lalu ketik kata "abc" | Isian mendapat fokus, mengetik huruf a, mengetik huruf b, mengetik huruf c |
+| 6 | Klik tombol setelah mengetik di isian | Isian kehilangan fokus, tombol diklik |
+ 
+### Eksperimen Praktikum 3
+1. Pesan tercetak 2 kali setiap pilihan diganti.
+2. Karena saat keyPressed terpicu, karakter yang baru diketik belum masuk ke isian, sehingga getText() membaca teks yang lama. Saat angka 3 diketik, event keyPressed memproses isian yang masih kosong, sehingga hasilnya terlambat satu karakter.
+3. Di jendela Output muncul `Exception in thread "AWT-EventQueue-0" java.lang.NumberFormatException: For input string: "a"`.
+### Eksperimen Praktikum 4
+1. Pesan tercetak dua kali. Sebaiknya satu tombol memakai satu cara saja, karena jika memakai dua cara maka hitung('x') akan berjalan dua kali.
+2. Perubahan di tab Design: tombol `%` ditambahkan ke operatorPanel dengan teks `%` dan nama variabel `modulus`. Karena sebelumnya Grid Layout hanya memiliki 4 kolom, jumlah kolom ditambah menjadi 5.
+   Perubahan di tab Source: event handler tombol dibuat melalui GUI Builder (Events, Action, actionPerformed), lalu di method `hitung` ditambahkan case baru beserta rumus modulus.
+3. Karena di method `hapus` terdapat `requestFocusInWindow()` untuk angka1Field. Jadi setelah tombol Hapus ditekan dan baris-baris sebelumnya dijalankan, fokus kembali ke angka1Field.
+### Deklarasi Penggunaan AI
+Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya. Serta membantu dalam penulisan README.md
