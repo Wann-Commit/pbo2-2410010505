@@ -53,7 +53,7 @@ public class PengamatEvent extends javax.swing.JFrame {
 
         atasPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 8, 8));
 
-        klikButton.setText("Klik");
+        klikButton.setText("Klik saya");
         klikButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 klikButtonMouseEntered(evt);
@@ -65,7 +65,7 @@ public class PengamatEvent extends javax.swing.JFrame {
         klikButton.addActionListener(this::klikButtonActionPerformed);
         atasPanel.add(klikButton);
 
-        fiturCheck.setText("Fitur");
+        fiturCheck.setText("Aktifkan fitur");
         fiturCheck.addItemListener(this::fiturCheckItemStateChanged);
         atasPanel.add(fiturCheck);
 

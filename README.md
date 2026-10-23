@@ -109,11 +109,11 @@ Jenis anggota (radio button) dan program studi (combo box) tidak memiliki event 
 ### Tangkapan Layar
 **Jendela Properties bagian Events untuk tombol Daftar**
  
-![Properties Events tombol Daftar](/img/tombolDaftarEvents_p05.png_p05.png)
+![Properties Events tombol Daftar](/img/tombolDaftarEvents_p05.png)
  
 **Dialog ringkasan**
  
-![Dialog ringkasan](/img/ringkasanDialog_p05.png_p05.png)
+![Dialog ringkasan](/img/ringkasanDialog_p05.png)
  
 **Dialog konfirmasi keluar**
  
