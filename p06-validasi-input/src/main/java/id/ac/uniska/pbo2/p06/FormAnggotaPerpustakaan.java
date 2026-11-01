@@ -399,6 +399,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         tombolPanel.add(batalButton);
 
         daftarButton.setText("Daftar");
+        daftarButton.setToolTipText("Centang 'Setuju dengan tata tertib perpustakaan' untuk daftar!");
         daftarButton.setEnabled(false);
         daftarButton.addActionListener(this::daftarButtonActionPerformed);
         tombolPanel.add(daftarButton);

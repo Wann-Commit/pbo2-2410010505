@@ -462,6 +462,7 @@
             <Component class="javax.swing.JButton" name="daftarButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Daftar"/>
+                <Property name="toolTipText" type="java.lang.String" value="Centang &apos;Setuju dengan tata tertib perpustakaan&apos; untuk daftar!"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
