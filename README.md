@@ -141,3 +141,86 @@ Jenis anggota (radio button) dan program studi (combo box) tidak memiliki event 
 3. Karena di method `hapus` terdapat `requestFocusInWindow()` untuk angka1Field. Jadi setelah tombol Hapus ditekan dan baris-baris sebelumnya dijalankan, fokus kembali ke angka1Field.
 ### Deklarasi Penggunaan AI
 Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya. Serta membantu dalam penulisan README.md
+
+## P06 - Validasi Input dan Kegunaan
+
+### Lembar Peer Review
+
+Lembar peer review yang saya terima dari teman (peninjau: Muhammad Aidanoor).
+
+[Scan lembar peer review (PDF)](/img/scanPeerReview_p06.jpg)
+
+### Temuan Teman dan Perbaikan
+
+Semua heuristik pada lembar bernilai 0 atau 1. Tidak ada temuan skor 3 (mayor) atau 4 (kritis). Temuan bernilai 1 tetap saya perbaiki.
+
+| No | Heuristik | Temuan dari teman | Skor | Perbaikan yang saya lakukan | Commit |
+|---|---|---|---|---|---|
+| 1 | Visibilitas status sistem | Tombol Daftar nonaktif tanpa keterangan | 1 | Mengisi toolTipText pada tombol Daftar | 111094c |
+| 6 | Mengenali, bukan mengingat | Aturan nomor HP baru terlihat setelah salah mengisi | 1 | Mengisi toolTipText pada nomorField | c9f1960 |
+
+Heuristik no. 2, 3, 4, 5, 7, 8, 9, dan 10 bernilai 0, jadi tidak ada perbaikan.
+
+### Tangkapan Layar
+
+**Form dengan pesan kesalahan**
+
+![Form dengan pesan kesalahan](/img/pesanKesalahan_p06.png)
+
+**Jendela Navigator yang memperlihatkan label pesan**
+
+![Navigator label pesan](/img/tabNavigator_p06.png)
+
+### Eksperimen Praktikum 4
+
+1. Tidak bisa diketik meggunakan huruf. baris yang menyebabkannya if (!Character.isDigit(evt.getKeyChar()) || penuh) {
+            evt.consume();
+2. Setelah menekan tab
+3. Karna tidak field belum diisi apapun jadi kode untuk mengeceknya belum jalan
+4. isian NPM karna itu kesalahan paling awal
+5. isian nama yang kena focus. Properti Mnemonic yang menganturnya
+6. tetap ada karna kode kosongkan() tidak jalan saat kita memilih No
+
+### Deklarasi Penggunaan AI
+Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya. Serta membantu dalam penulisan README.md
+
+## P07 - Tabel, Menu, dan Mini Proyek GUI
+ 
+## Bagian 1: p07-tabel-dan-menu
+ 
+### Eksperimen Praktikum 5
+ 
+1. Tidak, tabel tidak langsung berubah. Data sudah masuk ke list tetapi tabel tidak diberi tahu ada baris baru, karena `fireTableRowsInserted` yang memberi tahu tabel untuk menggambar ulang.
+2. Yang muncul di dialog konfirmasi adalah Budi Santoso, bukan Ahmad Fauzi. Karena nomor baris tampilan (1) dipakai langsung sebagai nomor baris model, padahal Ahmad Fauzi ada di baris model 2.
+3. Jendela utama tidak terkunci dan masih bisa diklik saat dialog terbuka. Kontak yang ditambahkan tidak masuk ke tabel, karena `setVisible(true)` tidak lagi menunggu dialog ditutup sehingga `tampilkan()` langsung mengembalikan `null`.
+4. Karena `ubahItem` dan `hapusItem` dinonaktifkan oleh `perbaruiTombol()` saat tidak ada baris yang dipilih. Accelerator pada menu item yang nonaktif tidak bisa dijalankan, sedangkan Ctrl+N tetap bekerja karena `tambahItem` selalu aktif.
+5. Baris pada `initComponents()` yang berubah ada di accelerator hapusItem.
+```java
+   hapusItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0)); // sesudah diubah
+   hapusItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK)); // sebelum diubah
+```
+ 
+6. Muncul error `java.lang.IllegalArgumentException: Cannot set a null TableModel`. Karena `initComponents()` dipanggil di awal konstruktor dan menjalankan `kontakTable.setModel(model)`, saat itu `model` masih `null` karena baru dibuat setelah `initComponents()`.
+---
+ 
+## Bagian 2: p07-mini-proyek (Katalog Buku Perpustakaan)
+ 
+### Peta Event
+ 
+| Komponen | Menu Events | Aksi |
+|---|---|---|
+| tambahButton, tambahItem | Action: actionPerformed | Memanggil tambah() |
+| ubahButton, ubahItem | Action: actionPerformed | Memanggil ubah() |
+| hapusButton, hapusItem | Action: actionPerformed | Memanggil hapus() |
+| cariField | Key: keyReleased | Memanggil saring() |
+| bukuTable | Mouse: mouseClicked | Klik dua kali memanggil ubah() |
+| keluarItem | Action: actionPerformed | Menutup jendela |
+| batalButton | Action: actionPerformed | Menutup dialog tanpa menyimpan |
+| simpanButton | Action: actionPerformed | Memanggil simpan() |
+ 
+### Video Demo
+ 
+[Video demo KatalogBuku (maksimal 3 menit)](https://drive.google.com/file/d/19B8dN-bljDWR2MobmAsw65GVTMyoWnYY/view?usp=sharing)
+ 
+### Deklarasi Penggunaan AI
+Saya menggunakan AI untuk membantu memahami modul lebih mendalam agar tidak ada kesalahan dalam pengumpulan penugasan kedepannya. Serta membantu dalam penulisan README.md
