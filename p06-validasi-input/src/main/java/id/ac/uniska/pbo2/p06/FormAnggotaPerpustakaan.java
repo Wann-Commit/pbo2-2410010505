@@ -283,6 +283,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(alamatScroll, gridBagConstraints);
 
+        hpField.setToolTipText("Silahkan isi nomor dengan awalan '08' dan minimal 8 digit maksimal 13 digit angka!");
         hpField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 hpFieldFocusLost(evt);
