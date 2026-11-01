@@ -1,0 +1,13 @@
+Jawaban Praktikum 4
+1. Tidak bisa diketik meggunakan huruf. baris yang menyebabkannya if (!Character.isDigit(evt.getKeyChar()) || penuh) {
+            evt.consume();
+
+2. Setelah menekan tab
+
+3. Karna tidak field belum diisi apapun jadi kode untuk mengeceknya belum jalan
+
+4. isian NPM karna itu kesalahan paling awal
+
+5. isian nama yang kena focus. Properti Mnemonic yang menganturnya
+
+6. tetap ada karna kode kosongkan() tidak jalan saat kita memilih No
