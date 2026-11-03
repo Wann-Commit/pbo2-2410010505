@@ -4,6 +4,8 @@
  */
 package id.ac.uniska.pbo2.p08.uts;
 
+import com.formdev.flatlaf.FlatLightLaf;
+
 /**
  * NAMA : Muhammad Raka Wisudawan Abhar
  * NPM  : 2410010505
@@ -58,6 +60,7 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         isiPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16));
         isiPanel.setLayout(new java.awt.GridBagLayout());
 
+        namaLabel.setLabelFor(namaField);
         namaLabel.setText("Nama");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -66,6 +69,7 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 8, 5, 10);
         isiPanel.add(namaLabel, gridBagConstraints);
 
+        nilaiTugasLabel.setLabelFor(nilaiTugasField);
         nilaiTugasLabel.setText("Nilai Tugas");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -74,6 +78,7 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 8, 5, 10);
         isiPanel.add(nilaiTugasLabel, gridBagConstraints);
 
+        nilaiUtsLabel.setLabelFor(nilaiUtsField);
         nilaiUtsLabel.setText("Nilai UTS");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -82,6 +87,7 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 8, 5, 10);
         isiPanel.add(nilaiUtsLabel, gridBagConstraints);
 
+        nilaiUasLabel.setLabelFor(nilaiUasField);
         nilaiUasLabel.setText("Nilai UAS");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -127,6 +133,7 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 0);
         isiPanel.add(nilaiUasField, gridBagConstraints);
 
+        npmLabel.setLabelFor(npmField);
         npmLabel.setText("NPM");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -140,9 +147,11 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         simpanButton.setText("Simpan");
+        simpanButton.addActionListener(this::simpanButtonActionPerformed);
         tombolPanel.add(simpanButton);
 
         bersihkanButton.setText("Bersihkan");
+        bersihkanButton.addActionListener(this::bersihkanButtonActionPerformed);
         tombolPanel.add(bersihkanButton);
 
         formPanel.add(tombolPanel, java.awt.BorderLayout.WEST);
@@ -174,26 +183,21 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
+        // TODO add your handling code here:
+        simpan();
+    }//GEN-LAST:event_simpanButtonActionPerformed
+
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
+        // TODO add your handling code here:
+        bersihkan();
+    }//GEN-LAST:event_bersihkanButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        FlatLightLaf.setup();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new RekapNilaiMahasiswa().setVisible(true));
