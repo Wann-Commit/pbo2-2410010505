@@ -5,9 +5,20 @@
 package id.ac.uniska.pbo2.p08.uts;
 
 /**
- *
- * @author USER
+ * NAMA : Muhammad Raka Wisudawan Abhar
+ * NPM  : 2410010505
+ * 
  */
-public class NilaiMahasiswa {
+public final class NilaiMahasiswa {
+    
+    private NilaiMahasiswa() {
+        
+    }
+    
+    private final npm();
+    public static String hitungNilai() {
+    
+}
+    
     
 }
